@@ -3,9 +3,10 @@
     {{-- ----------------------Users/Groups lists side---------------------- --}}
     <div class="messenger-listView {{ !!$id ? 'conversation-active' : '' }}">
         {{-- Header and search bar --}}
-        <div class="m-header" style="background-color:dimgray; color:whitesmoke;">
+        <div class="m-header" style="background-color:#6495ED; color:whitesmoke;">
             <nav>
-                <a href="#"><img src="" alt=""><span class="messenger-headTitle" style="color:whitesmoke;">Private Messenger</span> </a>
+                <a href="#"><img src="" alt=""><span class="messenger-headTitle"
+                        style="color:whitesmoke;">Private Messenger</span> </a>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
                     <a href="#"><i class="fas fa-cog settings-btn" style="color:whitesmoke;"></i></a>
@@ -22,36 +23,36 @@
         </div>
         {{-- tabs and lists --}}
         <div class="m-body contacts-container">
-           {{-- Lists [Users/Group] --}}
-           {{-- ---------------- [ User Tab ] ---------------- --}}
-           <div class="show messenger-tab users-tab app-scroll" data-view="users">
-               {{-- Favorites --}}
-               <div class="favorites-section">
-                <p class="messenger-title"><span>Favorites</span></p>
-                <div class="messenger-favorites app-scroll-hidden"></div>
-               </div>
-               {{-- Saved Messages --}}
-               <p class="messenger-title"><span>Your Space</span></p>
-               {!! view('Chatify::layouts.listItem', ['get' => 'saved']) !!}
-               {{-- Contact --}}
-               <p class="messenger-title"><span>All Messages</span></p>
-               <div class="listOfContacts" style="width: 100%;height: calc(100% - 272px);position: relative;"></div>
-           </div>
-             {{-- ---------------- [ Search Tab ] ---------------- --}}
-           <div class="messenger-tab search-tab app-scroll" data-view="search">
+            {{-- Lists [Users/Group] --}}
+            {{-- ---------------- [ User Tab ] ---------------- --}}
+            <div class="show messenger-tab users-tab app-scroll" data-view="users">
+                {{-- Favorites --}}
+                <div class="favorites-section">
+                    <p class="messenger-title"><span>Favorites</span></p>
+                    <div class="messenger-favorites app-scroll-hidden"></div>
+                </div>
+                {{-- Saved Messages --}}
+                <p class="messenger-title"><span>Your Space</span></p>
+                {!! view('Chatify::layouts.listItem', ['get' => 'saved']) !!}
+                {{-- Contact --}}
+                <p class="messenger-title"><span>All Messages</span></p>
+                <div class="listOfContacts" style="width: 100%;height: calc(100% - 272px);position: relative;"></div>
+            </div>
+            {{-- ---------------- [ Search Tab ] ---------------- --}}
+            <div class="messenger-tab search-tab app-scroll" data-view="search">
                 {{-- items --}}
                 <p class="messenger-title"><span>Search</span></p>
                 <div class="search-records">
                     <p class="message-hint center-el"><span>Type to search..</span></p>
                 </div>
-             </div>
+            </div>
         </div>
     </div>
 
     {{-- ----------------------Messaging side---------------------- --}}
     <div class="messenger-messagingView">
         {{-- header title [conversation name] amd buttons --}}
-        <div class="m-header m-header-messaging" style="background-color: dimgray;">
+        <div class="m-header m-header-messaging" style="background-color: #6495ED;">
             <nav class="chatify-d-flex chatify-justify-content-between chatify-align-items-center">
                 {{-- header back button, avatar and user name --}}
                 <div class="chatify-d-flex chatify-justify-content-between chatify-align-items-center">
@@ -62,12 +63,14 @@
                 </div>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
-                    <a href="#" class="add-to-favorite"><span style="color:whitesmoke;; font-size: 12px;">Add to Favorites</span></a>
+                    <a href="#" class="add-to-favorite"><span style="color:whitesmoke;; font-size: 12px;">Add to
+                            Favorites</span></a>
                     <a href="/home"><span style="color:whitesmoke; font-size: 12px;">Home</span></a>
                     <div class="messenger-infoView-btns text-danger">
-                        <a href="#" class="danger delete-conversation"><span style="color:whitesmoke; font-size: 12px;" class="fas fa-trash-alt"></span></a>
+                        <a href="#" class="danger delete-conversation"><span style="color:red; font-size: 12px;"
+                                class="fas fa-trash-alt"></span></a>
                     </div>
-                       
+
                 </nav>
             </nav>
             {{-- Internet connection --}}
