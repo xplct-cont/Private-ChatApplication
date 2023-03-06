@@ -6,7 +6,7 @@
         <div class="m-header" style="background-color:#6495ED; color:whitesmoke;">
             <nav>
                 <a href="#"><img src="" alt=""><span class="messenger-headTitle"
-                        style="color:whitesmoke;">Private Messenger</span> </a>
+                        style="color:whitesmoke;">Private ChatApp</span> </a>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
                     <a href="#"><i class="fas fa-cog settings-btn" style="color:whitesmoke;"></i></a>
@@ -59,17 +59,29 @@
                     <a href="#" class="show-listView"><i class="fas fa-arrow-left"></i></a>
                     {{-- <div class="avatar av-s header-avatar" style="margin: 0px 10px; margin-top: -5px; margin-bottom: -5px;">
                     </div> --}}
+                    <div style="margin-right: 10px;">
+                        <a href="#" class="add-to-favorite"><i class="fas fa-star" style="font-size: 15px;"></i></a>
+                </div>
                     <a href="#" class="user-name" style="color:whitesmoke;">{{ config('chatify.name') }}</a>
                 </div>
                 {{-- header buttons --}}
                 <nav class="m-header-right">
-                    <a href="#" class="add-to-favorite"><span style="color:whitesmoke;; font-size: 12px;">Add to
-                            Favorites</span></a>
-                    <a href="/home"><span style="color:whitesmoke; font-size: 12px;">Home</span></a>
                     <div class="messenger-infoView-btns text-danger">
                         <a href="#" class="danger delete-conversation"><span style="color:red; font-size: 12px;"
                                 class="fas fa-trash-alt"></span></a>
                     </div>
+                    <a href="{{ route('logout') }}" style="font-size: 12px;"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                     {{ __('Logout') }}
+                 </a>
+                    <div>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+
+                  
 
                 </nav>
             </nav>
