@@ -22,7 +22,7 @@
             </div> --}}
         </div>
         {{-- tabs and lists --}}
-        <div class="m-body contacts-container" style="background-color: #e7e9ec;">
+        <div class="m-body contacts-container shadow-lg">
             {{-- Lists [Users/Group] --}}
             {{-- ---------------- [ User Tab ] ---------------- --}}
             <div class="show messenger-tab users-tab app-scroll" data-view="users">
