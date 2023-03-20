@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <div class="text-center mt-4" style="text-decoration: none;">
-                           <a href="/register" style="text-decoration: none; font-size:15px;">Register an account</a>
+                           <a href="/register" style="text-decoration: none; font-size:15px;">Don't have an account? Sign Up</a>
                         </div>
                         @if (Route::has('password.request'))
                         <a class="btn btn-link text-danger" href="{{ route('password.request') }}" style="text-decoration: none;">

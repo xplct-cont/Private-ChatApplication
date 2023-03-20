@@ -3,7 +3,7 @@
     {{-- ----------------------Users/Groups lists side---------------------- --}}
     <div class="messenger-listView {{ !!$id ? 'conversation-active' : '' }}">
         {{-- Header and search bar --}}
-        <div class="m-header" style="background-color:#6495ED; color:whitesmoke;">
+        <div class="m-header" style="background-color:#3f70cd; color:whitesmoke;">
             <nav>
                 <a href="#"><img src="" alt=""><span class="messenger-headTitle"
                         style="color:whitesmoke;">Private ChatApp</span> </a>
@@ -22,7 +22,7 @@
             </div> --}}
         </div>
         {{-- tabs and lists --}}
-        <div class="m-body contacts-container">
+        <div class="m-body contacts-container" style="background-color: #e7e9ec;">
             {{-- Lists [Users/Group] --}}
             {{-- ---------------- [ User Tab ] ---------------- --}}
             <div class="show messenger-tab users-tab app-scroll" data-view="users">
@@ -52,7 +52,7 @@
     {{-- ----------------------Messaging side---------------------- --}}
     <div class="messenger-messagingView">
         {{-- header title [conversation name] amd buttons --}}
-        <div class="m-header m-header-messaging" style="background-color: #6495ED;">
+        <div class="m-header m-header-messaging" style="background-color: #3f70cd;">
             <nav class="chatify-d-flex chatify-justify-content-between chatify-align-items-center">
                 {{-- header back button, avatar and user name --}}
                 <div class="chatify-d-flex chatify-justify-content-between chatify-align-items-center">
@@ -70,7 +70,7 @@
                         <a href="#" class="danger delete-conversation"><span style="color:red; font-size: 12px;"
                                 class="fas fa-trash-alt"></span></a>
                     </div>
-                    <a href="{{ route('logout') }}" style="font-size: 12px;"
+                    <a href="{{ route('logout') }}" style="font-size: 12px; color:white;"
                     onclick="event.preventDefault();
                                   document.getElementById('logout-form').submit();">
                      {{ __('Logout') }}
